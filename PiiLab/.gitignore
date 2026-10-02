@@ -1,3 +1,4 @@
+app/LabAgent/appointment_log.jsonl
 *.log
 .env
 .venv/

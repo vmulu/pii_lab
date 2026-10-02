@@ -7,6 +7,9 @@ from config import GUARDRAIL_ID, GUARDRAIL_VERSION
 
 def for_partner(appointment: dict) -> dict:
     """ prepare appointment data for the third-party reminder provider """
+
+    # Allow-list: explicitly include only fields the provider needs
+    # to properly send a reminder to the user
     payload = {
         "appointment_id": appointment["appointment_id"],
         "phone": appointment["phone"],
